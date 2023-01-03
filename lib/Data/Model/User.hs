@@ -20,11 +20,11 @@ modelUser = Model {
     endpoint = "user",
     pluralEndpoint = "users",
     fields = [
-        ("name", "Name", ''Name),
-        ("username", "Username", ''Username),
-        ("email", "Email", ''Email),
-        ("password", "Password", ''Password),
-        ("userType", "Type", ''UserType),
-        ("verificationToken", "VerificationToken", ''MaybeVerificationToken)
+        Field "name" "Name" ''Name,
+        Field "username" "Username" ''Username,
+        Field "email" "Email" ''Email,
+        Field "password" "Password" ''Password,
+        Field "userType" "Type" ''UserType,
+        Field "verificationToken" "VerificationToken" ''MaybeVerificationToken
     ]
 }
