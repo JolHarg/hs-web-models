@@ -20,11 +20,11 @@ modelUser = Model {
     endpoint = "user",
     pluralEndpoint = "users",
     fields = [
-        Field "name" "Name" ''Name,
-        Field "username" "Username" ''Username,
-        Field "email" "Email" ''Email,
-        Field "password" "Password" ''Password,
-        Field "userType" "Type" ''UserType,
-        Field "verificationToken" "VerificationToken" ''MaybeVerificationToken
+        Field { lowerField = "name", upperField = "Name", typeName = ''Name },
+        Field { lowerField = "username", upperField = "Username", typeName = ''Username },
+        Field { lowerField = "email", upperField = "Email", typeName = ''Email },
+        Field { lowerField = "password", upperField = "Password", typeName = ''Password },
+        Field { lowerField = "userType", upperField = "Type", typeName = ''UserType },
+        Field { lowerField = "verificationToken", upperField = "VerificationToken", typeName = ''MaybeVerificationToken }
     ]
 }
