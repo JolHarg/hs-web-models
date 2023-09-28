@@ -42,7 +42,6 @@ library
                       -Wno-missing-local-signatures
                       -Wno-missing-safe-haskell-mode
                       -Wno-missing-kind-signatures
-                      -Wno-prepositive-qualified-module
 
 test-suite jolharg-web-models-test
   hs-source-dirs:      test
@@ -68,7 +67,6 @@ test-suite jolharg-web-models-test
                       -Wno-missing-local-signatures
                       -Wno-missing-safe-haskell-mode
                       -Wno-missing-kind-signatures
-                      -Wno-prepositive-qualified-module
   build-depends:
     base >= 4.12 && < 5
     -- , jolharg-web-models

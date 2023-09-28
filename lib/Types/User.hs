@@ -7,7 +7,7 @@
 
 module Types.User where
 
-import           Data.Model.User
-import           Types.TH
+import Data.Model.User
+import Types.TH
 
 makeType modelUser
