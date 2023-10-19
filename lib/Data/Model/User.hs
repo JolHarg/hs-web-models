@@ -3,18 +3,18 @@
 
 module Data.Model.User where
 
-import           Data.Model
-import           Types.Email
-import           Types.Name
-import           Types.Password
-import           Types.Username
-import           Types.UserType
-import           Types.VerificationToken
+import Data.Model
+import Types.Email
+import Types.Name
+import Types.Password
+import Types.Username
+import Types.UserType
+import Types.VerificationToken
 
 type MaybeVerificationToken  = Maybe VerificationToken
 
 modelUser ∷ Model
-modelUser = Model {
+modelUser = defaultModel {
     modelName = "User",
     pluralModelName = "Users",
     endpoint = "user",
