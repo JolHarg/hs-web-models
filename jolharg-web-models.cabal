@@ -42,7 +42,7 @@ library
       -Wno-missing-import-lists -Wno-missing-export-lists
       -Wno-implicit-prelude -Wno-missing-local-signatures
       -Wno-missing-safe-haskell-mode -Wno-all-missed-specialisations
-      -Wno-missed-specialisations
+      -Wno-missed-specialisations -Wno-prepositive-qualified-module
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
 
   else
@@ -52,7 +52,7 @@ library
       -Wno-implicit-prelude -Wno-missing-local-signatures
       -Wno-missing-safe-haskell-mode -Wno-missing-kind-signatures
       -Wno-missing-poly-kind-signatures -Wno-all-missed-specialisations
-      -Wno-missed-specialisations
+      -Wno-missed-specialisations -Wno-prepositive-qualified-module
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
 
 test-suite jolharg-web-models-test
@@ -75,6 +75,7 @@ test-suite jolharg-web-models-test
       -Wno-missing-export-lists -Wno-implicit-prelude
       -Wno-missing-safe-haskell-mode -Wno-missing-local-signatures
       -Wno-all-missed-specialisations -Wno-missed-specialisations
+      -Wno-prepositive-qualified-module
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
 
   else
@@ -85,6 +86,7 @@ test-suite jolharg-web-models-test
       -Wno-missing-local-signatures -Wno-missing-safe-haskell-mode
       -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
       -Wno-all-missed-specialisations -Wno-missed-specialisations
+      -Wno-prepositive-qualified-module
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
 
   build-depends:
