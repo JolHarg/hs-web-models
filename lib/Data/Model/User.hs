@@ -1,4 +1,3 @@
-{-# LANGUAGE LambdaCase            #-}
 {-# LANGUAGE TemplateHaskellQuotes #-}
 
 module Data.Model.User where
