@@ -1,6 +1,6 @@
 cabal-version:      3.0
 name:               jolharg-web-models
-version:            0.2.0.0
+version:            0.3.0.0
 license:            AGPL-3.0-only
 author:             Dan Dart
 maintainer:         git@dandart.co.uk
@@ -16,20 +16,23 @@ library
   exposed-modules:
     Data.Model.User
     Types.User
+
   -- other-extensions:
   build-depends:
     , base               ^>=4.21.0.0
-    , jolharg-models     ^>=0.2.0.0
-    , jolharg-web-types  ^>=0.2.0.0
+    , jolharg-models     ^>=0.3.0.0
+    , jolharg-web-types  ^>=0.3.0.0
+    , text               ^>=2.1.2
 
   -- for servant-reflex compatibility
-    -- , servant-auth >= 0.2.1 && < 0.4
+  -- , servant-auth >= 0.2.1 && < 0.4
   hs-source-dirs:     lib
   default-language:   GHC2024
   default-extensions:
     NoGeneralisedNewtypeDeriving
     OverloadedStrings
     UnicodeSyntax
+
   ghc-options:
     -Wall -Werror -Weverything -Wno-unsafe -Wno-safe
     -Wno-missing-import-lists -Wno-missing-export-lists
@@ -42,8 +45,9 @@ library
     -Wno-missed-specialisations
 
 test-suite jolharg-web-models-test
-  if arch(javascript) || arch(wasm32)
+  if (arch(javascript) || arch(wasm32))
     buildable: False
+
   hs-source-dirs:     test
   type:               exitcode-stdio-1.0
   default-language:   GHC2024
@@ -51,19 +55,23 @@ test-suite jolharg-web-models-test
     NoGeneralisedNewtypeDeriving
     OverloadedStrings
     UnicodeSyntax
+
   main-is:            Spec.hs
+
   if !arch(wasm32)
-    ghc-options: -threaded -rtsopts -with-rtsopts=-N 
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+
   ghc-options:
-    -Wall -Werror -Weverything
-    -Wno-unsafe -Wno-safe -Wno-missing-import-lists
-    -Wno-missing-export-lists -Wno-implicit-prelude
-    -Wno-missing-local-signatures -Wno-missing-safe-haskell-mode
-    -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
-    -Wno-all-missed-specialisations -Wno-missed-specialisations
-    -Wno-prepositive-qualified-module -Wno-missing-role-annotations
-    -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
-    -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+    -Wall -Werror -Weverything -Wno-unsafe -Wno-safe
+    -Wno-missing-import-lists -Wno-missing-export-lists
+    -Wno-implicit-prelude -Wno-missing-local-signatures
+    -Wno-missing-safe-haskell-mode -Wno-missing-kind-signatures
+    -Wno-missing-poly-kind-signatures -Wno-all-missed-specialisations
+    -Wno-missed-specialisations -Wno-prepositive-qualified-module
+    -Wno-missing-role-annotations -Wno-missing-kind-signatures
+    -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags
+    -Wno-missed-specialisations
+
   build-depends:
     , base   ^>=4.21.0.0
     , hspec  ^>=2.11.10
